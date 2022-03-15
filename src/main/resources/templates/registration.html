@@ -9,30 +9,30 @@
 <form method="post" action="/users/add">
   <label>
     <span>Username</span>
-    <input type="text" name="userName">
+    <input type="text" name="name" required>
   </label>
   <label>
     <span>Email</span>
-    <input type="email" name="email">
+    <input type="email" name="email" required>
   </label>
   <label>
     <span>Password</span>
-    <input type="password" name="password">
+    <input type="password" name="password" required>
   </label>
 
   <fieldset>
     <legend>Gender</legend>
     <label>
-      <input type="radio" name="gender">
+      <input type="radio" name="gender" value="MALE">
       <span>male</span>
     </label>
     <label>
-      <input type="radio" name="gender">
+      <input type="radio" name="gender" value="FEMALE">
       <span>female</span>
     </label>
   </fieldset>
   <button type="submit">Registration</button>
 </form>
-<a href="login.html">Login</a>
+<a href="/login">Login</a>
 </body>
 </html>
