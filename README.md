@@ -16,7 +16,7 @@ USERNAME                                                     Add todo | My todos
 
 - User + DTO
 
-name (form), email (form), password (form), sex (form), bio (editable on profile page), todos
+name (form), email (form), password (form), gender (form), bio (editable on profile page), todos
 
 ---
 - Todo + DTO
@@ -33,9 +33,10 @@ CASUAL, IMPORTANT, URGENT
 - GET / > /login
 - GET /login
 - GET /registration
-- GET /my-todos
 - GET /users/{userId}
+- GET /users/{userId}/my-todos
 - GET /users/{userId}/todo/{todoId}
+- POST /login
 - POST /users/add
 - POST /users/delete
 - POST /todos/add
