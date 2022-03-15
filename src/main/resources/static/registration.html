@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration</title>
+</head>
+<body>
+<h1>Registration</h1>
+<form method="post" action="/users/add">
+  <label>
+    <span>Username</span>
+    <input type="text" name="userName">
+  </label>
+  <label>
+    <span>Email</span>
+    <input type="email" name="email">
+  </label>
+  <label>
+    <span>Password</span>
+    <input type="password" name="password">
+  </label>
+
+  <fieldset>
+    <legend>Gender</legend>
+    <label>
+      <input type="radio" name="gender">
+      <span>male</span>
+    </label>
+    <label>
+      <input type="radio" name="gender">
+      <span>female</span>
+    </label>
+  </fieldset>
+  <button type="submit">Registration</button>
+</form>
+<a href="login.html">Login</a>
+</body>
+</html>
