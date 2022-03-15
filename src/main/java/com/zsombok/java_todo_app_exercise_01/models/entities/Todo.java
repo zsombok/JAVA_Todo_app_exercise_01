@@ -24,15 +24,15 @@ public class Todo {
     @Column(columnDefinition = "bool")
     private boolean isDone;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-ddThh:mm")
     private LocalDateTime deadline;
 
     @CreationTimestamp
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-ddThh:mm")
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-ddThh:mm")
     private LocalDateTime modifiedAt;
 
     @Enumerated(EnumType.STRING)

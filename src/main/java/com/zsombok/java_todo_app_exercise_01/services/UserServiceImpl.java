@@ -32,4 +32,9 @@ public class UserServiceImpl implements UserService {
         if (!passwordEncoder.matches(loginDto.getPassword(), user.getPassword())) throw new PasswordMismatchException();
         return user;
     }
+
+    @Override
+    public User findById(Integer id) throws NoSuchUserException {
+        return userDbRepository.findById(id).orElseThrow(NoSuchUserException::new);
+    }
 }

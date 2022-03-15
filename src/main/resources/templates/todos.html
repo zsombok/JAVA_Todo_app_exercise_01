@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
   <meta charset="UTF-8">
   <title>Todos</title>
 </head>
-<body>
+<body th:object="${user}">
 <h1>Todos</h1>
+<h2 th:text="*{name}"></h2>
+<a href="/todos/add">Add todo</a>
+<a th:href="|/users/*{id}/todos|">My todos</a>
+<a th:href="|/users/*{id}|">Profile</a>
+<p th:text="${todos.size()}"></p>
 </body>
 </html>

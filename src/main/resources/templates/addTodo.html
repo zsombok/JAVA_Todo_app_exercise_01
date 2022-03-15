@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+  <meta charset="UTF-8">
+  <title>Add todo</title>
+</head>
+<body>
+<h1>Add todo</h1>
+<form method="post" action="/todos">
+  <input type="hidden" name="owner" th:value="1">
+  <label>
+    <span>Title</span>
+    <input type="text" name="title" required>
+  </label>
+  <label>
+    <span>Body</span>
+    <textarea name="body" cols="30" rows="10"></textarea>
+  </label>
+  <label>
+    <span>Deadline</span>
+    <input type="datetime-local" name="deadline" required>
+  </label>
+  <label>
+    <span>Priority</span>
+    <select name="priority">
+      <option th:each="priority : ${priorities}" th:value="${priority}" th:text="${priority}"></option>
+    </select>
+  </label>
+  <button type="submit">Add todo</button>
+</form>
+</body>
+</html>

@@ -6,7 +6,9 @@
 </head>
 <body>
 <h1>Registration</h1>
-<form method="post" action="/users/add">
+<p th:if="${error}" th:text="${error}"></p>
+
+<form method="post" action="/users">
   <label>
     <span>Username</span>
     <input type="text" name="name" required>

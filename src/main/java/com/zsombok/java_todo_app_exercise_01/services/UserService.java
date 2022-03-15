@@ -9,4 +9,6 @@ public interface UserService {
     User save(User user);
 
     User findUserByLoginDTO(LoginDTO loginDto) throws NoSuchUserException, PasswordMismatchException;
+
+    User findById(Integer id) throws NoSuchUserException;
 }
