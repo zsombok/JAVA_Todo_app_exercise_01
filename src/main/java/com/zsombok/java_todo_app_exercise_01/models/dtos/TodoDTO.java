@@ -2,6 +2,7 @@ package com.zsombok.java_todo_app_exercise_01.models.dtos;
 
 import com.zsombok.java_todo_app_exercise_01.models.entities.User;
 import com.zsombok.java_todo_app_exercise_01.models.enums.Priority;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
@@ -9,6 +10,7 @@ public class TodoDTO {
 
     private String title;
     private String body;
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     private LocalDateTime deadline;
     private Priority priority;
     private User owner;
@@ -31,10 +33,6 @@ public class TodoDTO {
 
     public LocalDateTime getDeadline() {
         return deadline;
-    }
-
-    public void setDeadline(String deadline) {
-        this.deadline = LocalDateTime.parse(deadline);
     }
 
     public void setDeadline(LocalDateTime deadline) {
